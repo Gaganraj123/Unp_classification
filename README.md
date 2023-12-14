@@ -1,12 +1,26 @@
-# Data Background 
+This dataset contains the hourly count of rental bikes with 17 columns and 17379 rows between years 2011 and 2012 in Capital bikeshare system with the corresponding weather and seasonal information.
 
-• The data set was obtained from the Capital Bike Share program in Washington, D.C. which contained the
-historical bike usage pattern with weather data spanning two years.
+Variable Information:
 
-# Objective :
+instant: record index
+dteday : date
+season : season (1:winter, 2:spring, 3:summer, 4:fall)
+yr : year (0: 2011, 1:2012)
+mnth : month ( 1 to 12)
+hr : hour (0 to 23)
+holiday : weather day is holiday or not (extracted from http://dchr.dc.gov/page/holiday-schedule)
+weekday : day of the week
+workingday : if day is neither weekend nor holiday is 1, otherwise is 0.
+weathersit :
+1: Clear, Few clouds, Partly cloudy, Partly cloudy
+2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist
+3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds
+4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog
+temp : Normalized temperature in Celsius. The values are derived via (t-t_min)/(t_max-t_min), t_min=-8, t_max=+39 (only in hourly scale)
+atemp: Normalized feeling temperature in Celsius. The values are derived via (t-t_min)/(t_max-t_min), t_min=-16, t_max=+50 (only in hourly scale)
+hum: Normalized humidity. The values are divided to 100 (max)
+windspeed: Normalized wind speed. The values are divided to 67 (max)
+casual: count of casual users
+registered: count of registered users
+cnt: count of total rental bikes including both casual and registered
 
-• Currently, Rental bikes are introduced in many urban cities to enhance mobility comfort. It is important to
-make the rental bike available and accessible to the public at the right time as it lessens the waiting time.
-
-• Hence, the objective here is to build a superior statistical model to predict the number of bicycles required
-at each hour that can be rented with data availability.
